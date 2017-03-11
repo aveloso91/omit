@@ -1,0 +1,22 @@
+{
+    "omitApp": {
+        "degrees" : {
+            "home": {
+                "title": "Degrees",
+                "createLabel": "Crear nuevo Degrees",
+                "createOrEditLabel": "Crear o editar Degrees"
+            },
+            "created": "Un nuevo Degrees ha sido creado con el identificador {{ param }}",
+            "updated": "Un Degrees ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Degrees ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Degrees {{ id }}?"
+            },
+            "detail": {
+                "title": "Degrees"
+            },
+            "name": "Name",
+            "courses": "Courses"
+        }
+    }
+}

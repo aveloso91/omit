@@ -1,0 +1,22 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "courses",
+            "otherEntityName": "courses",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "degree"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170311180934",
+    "dto": "no",
+    "service": "serviceClass",
+    "entityTableName": "degrees",
+    "pagination": "infinite-scroll"
+}

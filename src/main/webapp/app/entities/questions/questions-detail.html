@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span data-translate="omitApp.questions.detail.title">Questions</span> {{vm.questions.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="omitApp.questions.text">Text</span></dt>
+        <dd>
+            <span>{{vm.questions.text}}</span>
+        </dd>
+        <dt><span data-translate="omitApp.questions.subject">Subject</span></dt>
+        <dd>
+            <a ui-sref="subjects-detail({id:vm.questions.subject.id})">{{vm.questions.subject.name}}</a>
+        </dd>
+        <dt><span data-translate="omitApp.questions.user">User</span></dt>
+        <dd>
+            {{vm.questions.user.login}}
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="questions-detail.edit({id:vm.questions.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

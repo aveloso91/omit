@@ -1,0 +1,23 @@
+{
+    "omitApp": {
+        "courses" : {
+            "home": {
+                "title": "Courses",
+                "createLabel": "Create a new Courses",
+                "createOrEditLabel": "Create or edit a Courses"
+            },
+            "created": "A new Courses is created with identifier {{ param }}",
+            "updated": "A Courses is updated with identifier {{ param }}",
+            "deleted": "A Courses is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Courses {{ id }}?"
+            },
+            "detail": {
+                "title": "Courses"
+            },
+            "name": "Name",
+            "degree": "Degree",
+            "subjects": "Subjects"
+        }
+    }
+}

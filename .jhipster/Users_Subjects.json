@@ -1,0 +1,25 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "subject",
+            "otherEntityName": "subjects",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipName": "user",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "login",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "users_Subjects"
+        }
+    ],
+    "fields": [],
+    "changelogDate": "20170311182050",
+    "dto": "no",
+    "service": "serviceClass",
+    "entityTableName": "users_subjects",
+    "pagination": "infinite-scroll"
+}

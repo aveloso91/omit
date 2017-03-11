@@ -1,0 +1,24 @@
+{
+    "omitApp": {
+        "subjects" : {
+            "home": {
+                "title": "Subjects",
+                "createLabel": "Create a new Subjects",
+                "createOrEditLabel": "Create or edit a Subjects"
+            },
+            "created": "A new Subjects is created with identifier {{ param }}",
+            "updated": "A Subjects is updated with identifier {{ param }}",
+            "deleted": "A Subjects is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Subjects {{ id }}?"
+            },
+            "detail": {
+                "title": "Subjects"
+            },
+            "name": "Name",
+            "course": "Course",
+            "users_subjects": "Users Subjects",
+            "questions": "Questions"
+        }
+    }
+}

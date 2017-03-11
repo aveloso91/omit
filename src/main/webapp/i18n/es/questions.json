@@ -1,0 +1,23 @@
+{
+    "omitApp": {
+        "questions" : {
+            "home": {
+                "title": "Questions",
+                "createLabel": "Crear nuevo Questions",
+                "createOrEditLabel": "Crear o editar Questions"
+            },
+            "created": "Un nuevo Questions ha sido creado con el identificador {{ param }}",
+            "updated": "Un Questions ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Questions ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Questions {{ id }}?"
+            },
+            "detail": {
+                "title": "Questions"
+            },
+            "text": "Text",
+            "subject": "Subject",
+            "user": "User"
+        }
+    }
+}

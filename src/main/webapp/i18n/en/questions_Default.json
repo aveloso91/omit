@@ -1,0 +1,21 @@
+{
+    "omitApp": {
+        "questions_Default" : {
+            "home": {
+                "title": "Questions Defaults",
+                "createLabel": "Create a new Questions Default",
+                "createOrEditLabel": "Create or edit a Questions Default"
+            },
+            "created": "A new Questions Default is created with identifier {{ param }}",
+            "updated": "A Questions Default is updated with identifier {{ param }}",
+            "deleted": "A Questions Default is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Questions Default {{ id }}?"
+            },
+            "detail": {
+                "title": "Questions Default"
+            },
+            "text": "Text"
+        }
+    }
+}

@@ -42,6 +42,16 @@ public class CacheConfiguration {
             cm.createCache(com.omit.domain.User.class.getName() + ".authorities", jcacheConfiguration);
             cm.createCache(com.omit.domain.PersistentToken.class.getName(), jcacheConfiguration);
             cm.createCache(com.omit.domain.User.class.getName() + ".persistentTokens", jcacheConfiguration);
+            cm.createCache(com.omit.domain.Degrees.class.getName(), jcacheConfiguration);
+            cm.createCache(com.omit.domain.Degrees.class.getName() + ".courses", jcacheConfiguration);
+            cm.createCache(com.omit.domain.Courses.class.getName(), jcacheConfiguration);
+            cm.createCache(com.omit.domain.Courses.class.getName() + ".subjects", jcacheConfiguration);
+            cm.createCache(com.omit.domain.Subjects.class.getName(), jcacheConfiguration);
+            cm.createCache(com.omit.domain.Subjects.class.getName() + ".users_subjects", jcacheConfiguration);
+            cm.createCache(com.omit.domain.Subjects.class.getName() + ".questions", jcacheConfiguration);
+            cm.createCache(com.omit.domain.Users_Subjects.class.getName(), jcacheConfiguration);
+            cm.createCache(com.omit.domain.Questions.class.getName(), jcacheConfiguration);
+            cm.createCache(com.omit.domain.Questions_Default.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

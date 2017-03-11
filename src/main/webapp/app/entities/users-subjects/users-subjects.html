@@ -1,0 +1,62 @@
+<div>
+    <h2 data-translate="omitApp.users_Subjects.home.title">Users Subjects</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="users-subjects.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="omitApp.users_Subjects.home.createLabel">
+                        Create new Users Subjects
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.reset()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="subject.name"><span data-translate="omitApp.users_Subjects.subject">Subject</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="user.login"><span data-translate="omitApp.users_Subjects.user">User</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody infinite-scroll="vm.loadPage(vm.page + 1)" infinite-scroll-disabled="vm.page >= vm.links['last']">
+                <tr ng-repeat="users_Subjects in vm.users_Subjects track by users_Subjects.id">
+                    <td><a ui-sref="users-subjects-detail({id:users_Subjects.id})">{{users_Subjects.id}}</a></td>
+                    <td>
+                        <a ui-sref="subjects-detail({id:users_Subjects.subject.id})">{{users_Subjects.subject.name}}</a>
+                    </td>
+                    <td>
+                        {{users_Subjects.user.login}}
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="users-subjects-detail({id:users_Subjects.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="users-subjects.edit({id:users_Subjects.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="users-subjects.delete({id:users_Subjects.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
