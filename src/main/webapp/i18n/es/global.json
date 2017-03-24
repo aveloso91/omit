@@ -39,7 +39,8 @@
             },
             "language": "Idioma",
             "questionnaire": "Cuestionario",
-            "comments": "Comentarios"
+            "comments": "Comentarios",
+            "students": "Alumnos"
         },
         "form": {
             "username": "Usuario",
