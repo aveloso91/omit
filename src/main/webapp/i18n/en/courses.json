@@ -4,7 +4,8 @@
             "home": {
                 "title": "Courses",
                 "createLabel": "Create a new Courses",
-                "createOrEditLabel": "Create or edit a Courses"
+                "createOrEditLabel": "Create or edit a Courses",
+                "uploadCSVfile": "Upload CSV file"
             },
             "created": "A new Courses is created with identifier {{ param }}",
             "updated": "A Courses is updated with identifier {{ param }}",

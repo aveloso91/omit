@@ -4,7 +4,8 @@
             "home": {
                 "title": "Questions",
                 "createLabel": "Create a new Questions",
-                "createOrEditLabel": "Create or edit a Questions"
+                "createOrEditLabel": "Create or edit a Questions",
+                "uploadCSVfile": "Upload CSV file"
             },
             "created": "A new Questions is created with identifier {{ param }}",
             "updated": "A Questions is updated with identifier {{ param }}",

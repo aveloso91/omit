@@ -2,23 +2,24 @@
     "omitApp": {
         "subjects" : {
             "home": {
-                "title": "Subjects",
-                "createLabel": "Crear nuevo Subjects",
-                "createOrEditLabel": "Crear o editar Subjects"
+                "title": "Asignaturas",
+                "createLabel": "Crear nueva Asignatura",
+                "createOrEditLabel": "Crear o editar Asignatura",
+                "uploadCSVfile": "Subir fichero CSV"
             },
-            "created": "Un nuevo Subjects ha sido creado con el identificador {{ param }}",
-            "updated": "Un Subjects ha sido actualizado con el identificador {{ param }}",
-            "deleted": "Un Subjects ha sido eliminado con el identificador {{ param }}",
+            "created": "Una nueva Asignatura ha sido creada con el identificador {{ param }}",
+            "updated": "Una Asignatura ha sido actualizada con el identificador {{ param }}",
+            "deleted": "Una Asignatura ha sido eliminada con el identificador {{ param }}",
             "delete": {
-                "question": "¿Seguro que quiere eliminar Subjects {{ id }}?"
+                "question": "¿Seguro que quiere eliminar Asignatura {{ id }}?"
             },
             "detail": {
-                "title": "Subjects"
+                "title": "Asignaturas"
             },
-            "name": "Name",
-            "course": "Course",
-            "users_subjects": "Users Subjects",
-            "questions": "Questions"
+            "name": "Nombre",
+            "course": "Curso",
+            "users_subjects": "Usuarios Asignaturas",
+            "questions": "Preguntas"
         }
     }
 }

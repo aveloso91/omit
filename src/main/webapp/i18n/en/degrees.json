@@ -4,7 +4,8 @@
             "home": {
                 "title": "Degrees",
                 "createLabel": "Create a new Degrees",
-                "createOrEditLabel": "Create or edit a Degrees"
+                "createOrEditLabel": "Create or edit a Degrees",
+                "uploadCSVfile": "Upload CSV file"
             },
             "created": "A new Degrees is created with identifier {{ param }}",
             "updated": "A Degrees is updated with identifier {{ param }}",

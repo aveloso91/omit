@@ -2,20 +2,21 @@
     "omitApp": {
         "questions_Default" : {
             "home": {
-                "title": "Questions Defaults",
-                "createLabel": "Crear nuevo Questions Default",
-                "createOrEditLabel": "Crear o editar Questions Default"
+                "title": "Preguntas por defecto",
+                "createLabel": "Crear nueva Pregunta por defecto",
+                "createOrEditLabel": "Crear o editar Pregunta por defecto",
+                "uploadCSVfile": "Subir fichero CSV"
             },
-            "created": "Un nuevo Questions Default ha sido creado con el identificador {{ param }}",
-            "updated": "Un Questions Default ha sido actualizado con el identificador {{ param }}",
-            "deleted": "Un Questions Default ha sido eliminado con el identificador {{ param }}",
+            "created": "Una nueva Pregunta por defecto ha sido creada con el identificador {{ param }}",
+            "updated": "Una Pregunta por defecto ha sido actualizada con el identificador {{ param }}",
+            "deleted": "Una Pregunta por defecto ha sido eliminada con el identificador {{ param }}",
             "delete": {
-                "question": "¿Seguro que quiere eliminar Questions Default {{ id }}?"
+                "question": "¿Seguro que quiere eliminar Pregunta por defecto {{ id }}?"
             },
             "detail": {
-                "title": "Questions Default"
+                "title": "Preguntas por defecto"
             },
-            "text": "Text"
+            "text": "Texto"
         }
     }
 }

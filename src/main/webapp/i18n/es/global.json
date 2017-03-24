@@ -37,7 +37,9 @@
                 "database": "Base de datos",
                 "jhipster-needle-menu-add-admin-element": "JHipster will add additional menu entries here (do not translate!)"
             },
-            "language": "Idioma"
+            "language": "Idioma",
+            "questionnaire": "Cuestionario",
+            "comments": "Comentarios"
         },
         "form": {
             "username": "Usuario",

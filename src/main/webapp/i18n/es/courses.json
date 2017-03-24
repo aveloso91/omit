@@ -2,22 +2,23 @@
     "omitApp": {
         "courses" : {
             "home": {
-                "title": "Courses",
-                "createLabel": "Crear nuevo Courses",
-                "createOrEditLabel": "Crear o editar Courses"
+                "title": "Cursos",
+                "createLabel": "Crear nuevo Curso",
+                "createOrEditLabel": "Crear o editar Curso",
+                "uploadCSVfile": "Subir fichero CSV"
             },
-            "created": "Un nuevo Courses ha sido creado con el identificador {{ param }}",
-            "updated": "Un Courses ha sido actualizado con el identificador {{ param }}",
-            "deleted": "Un Courses ha sido eliminado con el identificador {{ param }}",
+            "created": "Un nuevo Curso ha sido creado con el identificador {{ param }}",
+            "updated": "Un Curso ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Curso ha sido eliminado con el identificador {{ param }}",
             "delete": {
-                "question": "¿Seguro que quiere eliminar Courses {{ id }}?"
+                "question": "¿Seguro que quiere eliminar Curso {{ id }}?"
             },
             "detail": {
-                "title": "Courses"
+                "title": "Cursos"
             },
-            "name": "Name",
-            "degree": "Degree",
-            "subjects": "Subjects"
+            "name": "Nombre",
+            "degree": "Grado",
+            "subjects": "Asignaturas"
         }
     }
 }

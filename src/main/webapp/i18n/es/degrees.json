@@ -2,21 +2,22 @@
     "omitApp": {
         "degrees" : {
             "home": {
-                "title": "Degrees",
-                "createLabel": "Crear nuevo Degrees",
-                "createOrEditLabel": "Crear o editar Degrees"
+                "title": "Grados",
+                "createLabel": "Crear nuevo Grado",
+                "createOrEditLabel": "Crear o editar Grado",
+                "uploadCSVfile": "Subir fichero CSV"
             },
-            "created": "Un nuevo Degrees ha sido creado con el identificador {{ param }}",
-            "updated": "Un Degrees ha sido actualizado con el identificador {{ param }}",
-            "deleted": "Un Degrees ha sido eliminado con el identificador {{ param }}",
+            "created": "Un nuevo Grado ha sido creado con el identificador {{ param }}",
+            "updated": "Un Grado ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Grado ha sido eliminado con el identificador {{ param }}",
             "delete": {
-                "question": "¿Seguro que quiere eliminar Degrees {{ id }}?"
+                "question": "¿Seguro que quiere eliminar Grado {{ id }}?"
             },
             "detail": {
-                "title": "Degrees"
+                "title": "Grados"
             },
-            "name": "Name",
-            "courses": "Courses"
+            "name": "Nombre",
+            "courses": "Cursos"
         }
     }
 }

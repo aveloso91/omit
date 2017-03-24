@@ -4,7 +4,8 @@
             "home": {
                 "title": "Questions Defaults",
                 "createLabel": "Create a new Questions Default",
-                "createOrEditLabel": "Create or edit a Questions Default"
+                "createOrEditLabel": "Create or edit a Questions Default",
+                "uploadCSVfile": "Upload CSV file"
             },
             "created": "A new Questions Default is created with identifier {{ param }}",
             "updated": "A Questions Default is updated with identifier {{ param }}",

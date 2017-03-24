@@ -4,7 +4,8 @@
             "home": {
                 "title": "Users Subjects",
                 "createLabel": "Create a new Users Subjects",
-                "createOrEditLabel": "Create or edit a Users Subjects"
+                "createOrEditLabel": "Create or edit a Users Subjects",
+                "uploadCSVfile": "Upload CSV file"
             },
             "created": "A new Users Subjects is created with identifier {{ param }}",
             "updated": "A Users Subjects is updated with identifier {{ param }}",

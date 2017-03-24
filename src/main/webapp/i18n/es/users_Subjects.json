@@ -2,21 +2,22 @@
     "omitApp": {
         "users_Subjects" : {
             "home": {
-                "title": "Users Subjects",
-                "createLabel": "Crear nuevo Users Subjects",
-                "createOrEditLabel": "Crear o editar Users Subjects"
+                "title": "Usuarios Asignaturas",
+                "createLabel": "Crear nuevo Usuario Asignatura",
+                "createOrEditLabel": "Crear o editar Usuario Asignatura",
+                "uploadCSVfile": "Subir fichero CSV"
             },
-            "created": "Un nuevo Users Subjects ha sido creado con el identificador {{ param }}",
-            "updated": "Un Users Subjects ha sido actualizado con el identificador {{ param }}",
-            "deleted": "Un Users Subjects ha sido eliminado con el identificador {{ param }}",
+            "created": "Un nuevo Usuario Asignatura ha sido creado con el identificador {{ param }}",
+            "updated": "Un Usuario Asignatura ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Usuario Asignatura ha sido eliminado con el identificador {{ param }}",
             "delete": {
-                "question": "¿Seguro que quiere eliminar Users Subjects {{ id }}?"
+                "question": "¿Seguro que quiere eliminar Usuario Asignatura {{ id }}?"
             },
             "detail": {
-                "title": "Users Subjects"
+                "title": "Usuarios Asignaturas"
             },
-            "subject": "Subject",
-            "user": "User"
+            "subject": "Asignatura",
+            "user": "Usuario"
         }
     }
 }

@@ -2,22 +2,23 @@
     "omitApp": {
         "questions" : {
             "home": {
-                "title": "Questions",
-                "createLabel": "Crear nuevo Questions",
-                "createOrEditLabel": "Crear o editar Questions"
+                "title": "Preguntas",
+                "createLabel": "Crear nueva Pregunta",
+                "createOrEditLabel": "Crear o editar Pregunta",
+                "uploadCSVfile": "Subir fichero CSV"
             },
-            "created": "Un nuevo Questions ha sido creado con el identificador {{ param }}",
-            "updated": "Un Questions ha sido actualizado con el identificador {{ param }}",
-            "deleted": "Un Questions ha sido eliminado con el identificador {{ param }}",
+            "created": "Una nueva Pregunta ha sido creada con el identificador {{ param }}",
+            "updated": "Una Pregunta ha sido actualizada con el identificador {{ param }}",
+            "deleted": "Una Pregunta ha sido eliminada con el identificador {{ param }}",
             "delete": {
-                "question": "¿Seguro que quiere eliminar Questions {{ id }}?"
+                "question": "¿Seguro que quiere eliminar Pregunta {{ id }}?"
             },
             "detail": {
-                "title": "Questions"
+                "title": "Preguntas"
             },
-            "text": "Text",
-            "subject": "Subject",
-            "user": "User"
+            "text": "Texto",
+            "subject": "Asignatura",
+            "user": "Usuario"
         }
     }
 }
