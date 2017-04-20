@@ -15,4 +15,6 @@ public interface Users_SubjectsRepository extends JpaRepository<Users_Subjects,L
     @Query("select users_Subjects from Users_Subjects users_Subjects where users_Subjects.user.login = ?#{principal.username}")
     List<Users_Subjects> findByUserIsCurrentUser();
 
+    @Query("select users_Subjects from Users_Subjects users_Subjects where users_Subjects.subject.id = ?1")
+    List<Users_Subjects> findUsersBySubject(Long var1);
 }

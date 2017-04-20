@@ -1,5 +1,22 @@
 <div>
     <h2 data-translate="students.home.title">Students</h2>
     <jhi-alert></jhi-alert>
+    <form name="form" role="form" novalidate ng-submit="" show-validation>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="subject" data-translate="comments.choose.subject">Choose Subject</label>
+                <select class="form-control" id="subject" data-translate="" ng-model="vm.subjects.name"
+                        ng-options="subjects as subjects.name for subjects in vm.subjects track by subjects.id"
+                        ng-change="vm.getStudents(vm.subjects.name)">
+                </select>
+            </div>
+            <!--<div class="col-md-4" >-->
+                <!--<button class="btn btn-primary">-->
+                    <!--<span class="glyphicon glyphicon-upload"></span> <span data-translate="students.home.uploadCSVfile">-->
+                    <!--Load a CSV file</span>-->
+                <!--</button>-->
+            <!--</div>-->
+        </div>
+    </form>
 
 </div>

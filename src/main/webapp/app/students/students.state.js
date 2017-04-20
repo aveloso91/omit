@@ -22,13 +22,14 @@
                 views: {
                     'content@': {
                         templateUrl: 'app/students/students.html',
-                        controller: 'CommentsController',
+                        controller: 'StudentsController',
                         controllerAs: 'vm'
                     }
                 },
                 resolve: {
                     translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
                         $translatePartialLoader.addPart('students');
+                        $translatePartialLoader.addPart('comments');
                         $translatePartialLoader.addPart('global');
                         return $translate.refresh();
                     }]

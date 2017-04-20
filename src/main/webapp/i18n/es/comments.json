@@ -2,6 +2,18 @@
     "comments":{
         "home":{
             "title":"Comentarios"
-        }
+        },
+        "submit":"Enviar",
+        "writeyourComment":"Escribe tu comentario aquí",
+        "choose":{
+            "teacher":"Elige profesor",
+            "subject": "Elige asignatura"
+        },
+        "errors":{
+            "notsubject":"Debes seleccionar una asignatura",
+            "notteacher":"Debes seleccionar un profesor",
+            "notcomment":"Debes escribir un comentario"
+        },
+        "successSent":"Comentario enviado con éxito"
     }
 }

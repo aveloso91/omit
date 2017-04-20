@@ -30,6 +30,7 @@
                 translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
                     $translatePartialLoader.addPart('comments');
                     $translatePartialLoader.addPart('global');
+                    $translatePartialLoader.addPart('users_Subjects');
                     return $translate.refresh();
                 }]
             }

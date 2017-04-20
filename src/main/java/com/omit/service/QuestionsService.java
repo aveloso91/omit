@@ -19,7 +19,7 @@ import java.util.List;
 public class QuestionsService {
 
     private final Logger log = LoggerFactory.getLogger(QuestionsService.class);
-    
+
     private final QuestionsRepository questionsRepository;
 
     public QuestionsService(QuestionsRepository questionsRepository) {
@@ -40,7 +40,7 @@ public class QuestionsService {
 
     /**
      *  Get all the questions.
-     *  
+     *
      *  @param pageable the pagination information
      *  @return the list of entities
      */
@@ -72,5 +72,11 @@ public class QuestionsService {
     public void delete(Long id) {
         log.debug("Request to delete Questions : {}", id);
         questionsRepository.delete(id);
+    }
+
+    public List<Questions> findQuestionsBySubjectTeacher(Long idTeacher, Long idSubject){
+        log.debug("Resques to get all questions of a teacher and subject");
+        List<Questions> list = questionsRepository.findQuestionsBySubjectTeacher(idTeacher, idSubject);
+        return list;
     }
 }

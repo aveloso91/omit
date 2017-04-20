@@ -1,7 +1,8 @@
 {
     "students":{
         "home":{
-            "title":"Students"
+            "title":"Students",
+            "uploadCSVfile": "Upload CSV file"
         }
     }
 }

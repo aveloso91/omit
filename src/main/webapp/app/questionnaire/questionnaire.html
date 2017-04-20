@@ -1,5 +1,67 @@
 <div>
     <h2 data-translate="questionnaire.home.title">Questionnaire</h2>
     <jhi-alert></jhi-alert>
+    <br/>
+    <div>
+        <form name="form" role="form" novalidate ng-submit="" show-validation>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="subject" data-translate="comments.choose.subject">Choose Subject</label>
+                    <select class="form-control" id="subject" data-translate="" ng-model="vm.subjects.name"
+                            ng-options="subjects as subjects.name for subjects in vm.subjects track by subjects.id"
+                            ng-change="vm.getTeachers(vm.subjects.name)">
+                        <!--<option value=""></option>-->
+                    </select>
+                </div>
+                <div class="col-md-4" has-authority="ROLE_STUDENT">
+                    <label for="teacher" data-translate="comments.choose.teacher">Choose teacher</label>
+                    <select class="form-control" id="teacher" data-translate="" ng-model="vm.teachers.id"
+                            ng-options="users as users.firstName +' '+ users.lastName for users in vm.teachers track by users.firstName"
+                            ng-change="vm.getQuestions(vm.subjects.name, vm.teachers.id)">
+                    </select>
+                </div>
+                <div class="col-md-4" has-authority="ROLE_TEACHER">
+                    <label for="month" data-translate="questionnaire.month">Choose month</label>
+                    <select class="form-control" id="month" data-translate="" ng-model="vm.months.value"
+                            ng-options="months as months.name for months in vm.months"
+                            ng-change="vm.loadInMonth(vm.month.name)">
+                    </select>
+                </div>
+            </div>
+        </form>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+            <tr>
+                <th><span data-translate="questionnaire.questions">Questions</span></th>
+                <th><span data-translate="questionnaire.score">Score</span></th>
+            </tr>
+            </thead>
+            <tbody infinite-scroll="vm.loadPage(vm.page + 1)" infinite-scroll-disabled="vm.page >= vm.links['last']">
+            <tr ng-repeat="questions in vm.questions track by questions.id">
+                <td>{{questions.text}}</td>
+                <td has-authority="ROLE_STUDENT">
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-primary">
+                            <input type="radio"  name="options">1</label>
+                        <label class="btn btn-primary">
+                            <input type="radio" name="options">2</label>
+                        <label class="btn btn-primary">
+                            <input type="radio" name="options">3</label>
+                        <label class="btn btn-primary">
+                            <input type="radio" name="options">4</label>
+                        <label class="btn btn-primary">
+                            <input type="radio" name="options">5</label>
+                    </div>
+                </td>
+                <td has-authority="ROLE_TEACHER">
+                    <span class="badge">42</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 
 </div>

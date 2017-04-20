@@ -2,6 +2,23 @@
     "questionnaire":{
         "home":{
             "title":"Cuestionario"
-        }
+        },
+        "questions":"Preguntas",
+        "months":{
+            "jan":"Enero",
+            "feb":"Febrero",
+            "mar":"Marzo",
+            "apr":"Abril",
+            "may":"Mayo",
+            "jun":"Junio",
+            "jul":"Julio",
+            "aug":"Agosto",
+            "sep":"Septiembre",
+            "oct":"Octubre",
+            "nov":"Noviembre",
+            "dec":"Diciembre"
+        },
+        "month":"Selecciona un mes del curso",
+        "score": "Puntuación"
     }
 }

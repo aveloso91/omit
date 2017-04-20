@@ -2,6 +2,8 @@ package com.omit.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
 import com.omit.domain.Questions;
+import com.omit.repository.SubjectsRepository;
+import com.omit.repository.UserRepository;
 import com.omit.service.QuestionsService;
 import com.omit.web.rest.util.HeaderUtil;
 import com.omit.web.rest.util.PaginationUtil;
@@ -31,11 +33,18 @@ public class QuestionsResource {
     private final Logger log = LoggerFactory.getLogger(QuestionsResource.class);
 
     private static final String ENTITY_NAME = "questions";
-        
+
     private final QuestionsService questionsService;
 
-    public QuestionsResource(QuestionsService questionsService) {
+    private final UserRepository userRepository;
+
+    private final SubjectsRepository subjectsRepository;
+
+
+    public QuestionsResource(QuestionsService questionsService, UserRepository userRepository, SubjectsRepository subjectsRepository) {
         this.questionsService = questionsService;
+        this.userRepository = userRepository;
+        this.subjectsRepository = subjectsRepository;
     }
 
     /**
@@ -123,6 +132,39 @@ public class QuestionsResource {
         log.debug("REST request to delete Questions : {}", id);
         questionsService.delete(id);
         return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id.toString())).build();
+    }
+
+    /**
+     * Get teachers by subject.
+     * @param idTeacher id of teacher
+     * @param idSubject id of subject
+     * @return List of teachers
+     */
+    @RequestMapping("/questions/questionsBySubjectTeacher/{idTeacher}/{idSubject}")
+    @Timed
+    public List<Questions> findQuestionsBySubjectTeacher (@PathVariable Long idTeacher,@PathVariable Long idSubject){
+        log.debug("Request to get Questions of Teacher: {}", idTeacher);
+        List<Questions> questionsList = questionsService.findQuestionsBySubjectTeacher(idTeacher,idSubject);
+
+        return questionsList;
+    }
+
+    /**
+     * Get teachers by subject.
+     * @param idTeacher id of teacher
+     * @param idSubject id of subject
+     * @return List of teachers
+     */
+    @RequestMapping("/questions/saveQuestionsDefaultTS/{text}/{idTeacher}/{idSubject}")
+    @Timed
+    public void saveQuestionsDefaultTS (@PathVariable String text, @PathVariable Long idTeacher,@PathVariable Long idSubject) throws URISyntaxException {
+        log.debug("Saving Questions of Teacher: {}", idTeacher);
+        Questions questions = new Questions();
+        questions.setText(text);
+        questions.setUser(userRepository.findOneWithAuthoritiesById(idTeacher));
+        questions.setSubject(subjectsRepository.findOne(idSubject));
+        questionsService.save(questions);
+
     }
 
 }

@@ -22,7 +22,7 @@
                 views: {
                     'content@': {
                         templateUrl: 'app/questionnaire/questionnaire.html',
-                        controller: 'CommentsController',
+                        controller: 'QuestionnaireController',
                         controllerAs: 'vm'
                     }
                 },
@@ -30,6 +30,7 @@
                     translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
                         $translatePartialLoader.addPart('questionnaire');
                         $translatePartialLoader.addPart('global');
+                        $translatePartialLoader.addPart('comments');
                         return $translate.refresh();
                     }]
                 }

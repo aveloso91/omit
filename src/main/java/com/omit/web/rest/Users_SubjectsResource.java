@@ -1,6 +1,8 @@
 package com.omit.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
+import com.omit.domain.Subjects;
+import com.omit.domain.User;
 import com.omit.domain.Users_Subjects;
 import com.omit.service.Users_SubjectsService;
 import com.omit.web.rest.util.HeaderUtil;
@@ -31,7 +33,7 @@ public class Users_SubjectsResource {
     private final Logger log = LoggerFactory.getLogger(Users_SubjectsResource.class);
 
     private static final String ENTITY_NAME = "users_Subjects";
-        
+
     private final Users_SubjectsService users_SubjectsService;
 
     public Users_SubjectsResource(Users_SubjectsService users_SubjectsService) {
@@ -125,4 +127,43 @@ public class Users_SubjectsResource {
         return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id.toString())).build();
     }
 
+    /**
+     * GET  /users-subjects/subjects/:id : get all Subjects of User.
+     *
+     * @param id the id of the User
+     * @return the ResponseEntity with status 200 (OK) and the list of Teachers in body, or with status 404 (Not Found)
+     */
+    @RequestMapping("/users-subjects/SubjectsByUser/{id}")
+    @Timed
+    public ResponseEntity<List<Subjects>> getSubjectsByUser(@PathVariable Long id) {
+        log.debug("REST request to get Teachers of Subject : {}", id);
+        List<Subjects> subjectsList = users_SubjectsService.findSubjectsByUser(id);
+        return ResponseUtil.wrapOrNotFound(Optional.ofNullable(subjectsList));
+    }
+
+    /**
+     * GET  /users-subjects/studentsBySubject/{id} get all Students of Subject.
+     * @param id of Subject.
+     * @return the ResponseEntity with status 200 (OK) and the list of Students in body, or with status 404 (Not Found)
+     */
+    @RequestMapping("/users-subjects/studentsBySubject/{id}")
+    @Timed
+    public ResponseEntity<List<User>> getStudentsBySubject(@PathVariable Long id) {
+        log.debug("REST request to get Students of Subject : {}", id);
+        List<User> studentsList = users_SubjectsService.findStudentsBySubject(id);
+        return ResponseUtil.wrapOrNotFound(Optional.ofNullable(studentsList));
+    }
+
+    /**
+     * GET  /users-subjects/teachersBySubject/{id} get all Teachers of Subject.
+     * @param id of Subject.
+     * @return the ResponseEntity with status 200 (OK) and the list of Teachers in body, or with status 404 (Not Found)
+     */
+    @RequestMapping("/users-subjects/teachersBySubject/{id}")
+    @Timed
+    public ResponseEntity<List<User>> getTeachersBySubject(@PathVariable Long id) {
+        log.debug("REST request to get Teachers of Subject : {}", id);
+        List<User> teachersList = users_SubjectsService.findTeachersBySubject(id);
+        return ResponseUtil.wrapOrNotFound(Optional.ofNullable(teachersList));
+    }
 }

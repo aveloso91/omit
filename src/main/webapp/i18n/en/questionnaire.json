@@ -2,6 +2,23 @@
     "questionnaire":{
         "home":{
             "title":"Questionnaire"
-        }
+        },
+        "questions":"Questions",
+        "months":{
+            "jan":"January",
+            "feb":"February",
+            "mar":"March",
+            "apr":"April",
+            "may":"May",
+            "jun":"June",
+            "jul":"July",
+            "aug":"August",
+            "sep":"September",
+            "oct":"October",
+            "nov":"November",
+            "dec":"December"
+        },
+        "month":"Choose a month of the course",
+        "score":"Score"
     }
 }

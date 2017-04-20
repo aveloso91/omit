@@ -31,7 +31,7 @@ public class SubjectsResource {
     private final Logger log = LoggerFactory.getLogger(SubjectsResource.class);
 
     private static final String ENTITY_NAME = "subjects";
-        
+
     private final SubjectsService subjectsService;
 
     public SubjectsResource(SubjectsService subjectsService) {

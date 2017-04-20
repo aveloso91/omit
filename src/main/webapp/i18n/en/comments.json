@@ -2,6 +2,18 @@
     "comments":{
         "home":{
             "title":"Comments"
-        }
+        },
+        "submit":"Submit",
+        "writeyourComment":"Write your comment here",
+        "choose":{
+            "teacher":"Choose teacher",
+            "subject": "Choose subject"
+        },
+        "errors":{
+            "notsubject":"You must select a subject",
+            "notteacher":"You must select a teacher",
+            "notcomment":"You must write a comment"
+        },
+        "successSent":"Comment sent successfully"
     }
 }

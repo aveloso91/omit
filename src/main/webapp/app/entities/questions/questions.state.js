@@ -18,7 +18,7 @@
             },
             views: {
                 'content@': {
-                    templateUrl: 'app/entities/questions/questionnaire.html',
+                    templateUrl: 'app/entities/questions/questions.html',
                     controller: 'QuestionsController',
                     controllerAs: 'vm'
                 }

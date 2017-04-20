@@ -19,7 +19,7 @@ import java.util.List;
 public class SubjectsService {
 
     private final Logger log = LoggerFactory.getLogger(SubjectsService.class);
-    
+
     private final SubjectsRepository subjectsRepository;
 
     public SubjectsService(SubjectsRepository subjectsRepository) {
@@ -40,7 +40,7 @@ public class SubjectsService {
 
     /**
      *  Get all the subjects.
-     *  
+     *
      *  @param pageable the pagination information
      *  @return the list of entities
      */
