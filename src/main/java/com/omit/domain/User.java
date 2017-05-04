@@ -52,6 +52,14 @@ public class User extends AbstractAuditingEntity implements Serializable {
     @Column(name = "last_name", length = 50)
     private String lastName;
 
+    @Size(max = 50)
+    @Column(name = "second_last_name", length = 50)
+    private String secondLastName;
+
+    @Size(max = 50)
+    @Column(name = "dni", length = 11)
+    private String dni;
+
     @Email
     @Size(max = 100)
     @Column(length = 100, unique = true)
@@ -209,6 +217,22 @@ public class User extends AbstractAuditingEntity implements Serializable {
         this.persistentTokens = persistentTokens;
     }
 
+    public String getSecondLastName() {
+        return secondLastName;
+    }
+
+    public void setSecondLastName(String secondLastName) {
+        this.secondLastName = secondLastName;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -238,6 +262,8 @@ public class User extends AbstractAuditingEntity implements Serializable {
             "login='" + login + '\'' +
             ", firstName='" + firstName + '\'' +
             ", lastName='" + lastName + '\'' +
+            ", secondLastName='" + lastName + '\'' +
+            ", dni='" + dni + '\'' +
             ", email='" + email + '\'' +
             ", imageUrl='" + imageUrl + '\'' +
             ", activated='" + activated + '\'' +

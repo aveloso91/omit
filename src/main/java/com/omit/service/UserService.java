@@ -86,8 +86,8 @@ public class UserService {
             });
     }
 
-    public User createUser(String login, String password, String firstName, String lastName, String email,
-        String imageUrl, String langKey) {
+    public User createUser(String login, String password, String firstName, String lastName,String secondLastName, String dni,
+                           String email, String imageUrl, String langKey) {
 
         User newUser = new User();
         Authority authority = authorityRepository.findOne(AuthoritiesConstants.USER);
@@ -98,6 +98,8 @@ public class UserService {
         newUser.setPassword(encryptedPassword);
         newUser.setFirstName(firstName);
         newUser.setLastName(lastName);
+        newUser.setSecondLastName(secondLastName);
+        newUser.setDni(dni);
         newUser.setEmail(email);
         newUser.setImageUrl(imageUrl);
         newUser.setLangKey(langKey);
@@ -117,6 +119,8 @@ public class UserService {
         user.setLogin(userDTO.getLogin());
         user.setFirstName(userDTO.getFirstName());
         user.setLastName(userDTO.getLastName());
+        user.setSecondLastName(userDTO.getSecondLastName());
+        user.setDni(userDTO.getDni());
         user.setEmail(userDTO.getEmail());
         user.setImageUrl(userDTO.getImageUrl());
         if (userDTO.getLangKey() == null) {
@@ -144,10 +148,12 @@ public class UserService {
     /**
      * Update basic information (first name, last name, email, language) for the current user.
      */
-    public void updateUser(String firstName, String lastName, String email, String langKey) {
+    public void updateUser(String firstName, String lastName, String secondLastName, String dni, String email, String langKey) {
         userRepository.findOneByLogin(SecurityUtils.getCurrentUserLogin()).ifPresent(user -> {
             user.setFirstName(firstName);
             user.setLastName(lastName);
+            user.setSecondLastName(secondLastName);
+            user.setDni(dni);
             user.setEmail(email);
             user.setLangKey(langKey);
             log.debug("Changed Information for User: {}", user);
@@ -164,6 +170,8 @@ public class UserService {
                 user.setLogin(userDTO.getLogin());
                 user.setFirstName(userDTO.getFirstName());
                 user.setLastName(userDTO.getLastName());
+                user.setSecondLastName(userDTO.getSecondLastName());
+                user.setDni(userDTO.getDni());
                 user.setEmail(userDTO.getEmail());
                 user.setImageUrl(userDTO.getImageUrl());
                 user.setActivated(userDTO.isActivated());

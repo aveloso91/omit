@@ -146,6 +146,8 @@ public class AccountResourceIntTest {
             "password",             // password
             "Joe",                  // firstName
             "Shmoe",                // lastName
+            "Second",               // secondLastName
+            "12345678L",            // dni
             "joe@example.com",      // e-mail
             true,                   // activated
             "http://placehold.it/50x50", //imageUrl
@@ -175,6 +177,8 @@ public class AccountResourceIntTest {
             "password",             // password
             "Funky",                // firstName
             "One",                  // lastName
+            "Second",               // secondLastName
+            "12345678L",            // dni
             "funky@example.com",    // e-mail
             true,                   // activated
             "http://placehold.it/50x50", //imageUrl
@@ -204,6 +208,8 @@ public class AccountResourceIntTest {
             "password",         // password
             "Bob",              // firstName
             "Green",            // lastName
+            "Second",               // secondLastName
+            "12345678L",            // dni
             "invalid",          // e-mail <-- invalid
             true,               // activated
             "http://placehold.it/50x50", //imageUrl
@@ -233,6 +239,8 @@ public class AccountResourceIntTest {
             "123",              // password with only 3 digits
             "Bob",              // firstName
             "Green",            // lastName
+            "Second",               // secondLastName
+            "12345678L",            // dni
             "bob@example.com",  // e-mail
             true,               // activated
             "http://placehold.it/50x50", //imageUrl
@@ -263,6 +271,8 @@ public class AccountResourceIntTest {
             "password",             // password
             "Alice",                // firstName
             "Something",            // lastName
+            "Second",               // secondLastName
+            "12345678L",            // dni
             "alice@example.com",    // e-mail
             true,                   // activated
             "http://placehold.it/50x50", //imageUrl
@@ -274,7 +284,7 @@ public class AccountResourceIntTest {
             new HashSet<>(Arrays.asList(AuthoritiesConstants.USER)));
 
         // Duplicate login, different e-mail
-        ManagedUserVM duplicatedUser = new ManagedUserVM(validUser.getId(), validUser.getLogin(), validUser.getPassword(), validUser.getLogin(), validUser.getLastName(),
+        ManagedUserVM duplicatedUser = new ManagedUserVM(validUser.getId(), validUser.getLogin(), validUser.getPassword(), validUser.getLogin(), validUser.getLastName(), validUser.getSecondLastName(), validUser.getDni(),
             "alicejr@example.com", true, validUser.getImageUrl(), validUser.getLangKey(), validUser.getCreatedBy(), validUser.getCreatedDate(), validUser.getLastModifiedBy(), validUser.getLastModifiedDate(), validUser.getAuthorities());
 
         // Good user
@@ -305,6 +315,8 @@ public class AccountResourceIntTest {
             "password",             // password
             "John",                 // firstName
             "Doe",                  // lastName
+            "Second",               // secondLastName
+            "12345678L",            // dni
             "john@example.com",     // e-mail
             true,                   // activated
             "http://placehold.it/50x50", //imageUrl
@@ -316,7 +328,7 @@ public class AccountResourceIntTest {
             new HashSet<>(Arrays.asList(AuthoritiesConstants.USER)));
 
         // Duplicate e-mail, different login
-        ManagedUserVM duplicatedUser = new ManagedUserVM(validUser.getId(), "johnjr", validUser.getPassword(), validUser.getLogin(), validUser.getLastName(),
+        ManagedUserVM duplicatedUser = new ManagedUserVM(validUser.getId(), "johnjr", validUser.getPassword(), validUser.getLogin(), validUser.getLastName(), validUser.getSecondLastName(),validUser.getDni(),
             validUser.getEmail(), true, validUser.getImageUrl(), validUser.getLangKey(), validUser.getCreatedBy(), validUser.getCreatedDate(), validUser.getLastModifiedBy(), validUser.getLastModifiedDate(), validUser.getAuthorities());
 
         // Good user
@@ -346,6 +358,8 @@ public class AccountResourceIntTest {
             "password",             // password
             "Bad",                  // firstName
             "Guy",                  // lastName
+            "Second",               // secondLastName
+            "12345678L",            // dni
             "badguy@example.com",   // e-mail
             true,                   // activated
             "http://placehold.it/50x50", //imageUrl
@@ -376,6 +390,8 @@ public class AccountResourceIntTest {
             "funky-log!n",          // login <-- invalid
             "Funky",                // firstName
             "One",                  // lastName
+            "Second",               // secondLastName
+            "12345678L",            // dni
             "funky@example.com",    // e-mail
             true,                   // activated
             "http://placehold.it/50x50", //imageUrl

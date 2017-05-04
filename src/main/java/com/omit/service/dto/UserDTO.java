@@ -29,6 +29,12 @@ public class UserDTO {
     @Size(max = 50)
     private String lastName;
 
+    @Size(max = 50)
+    private String secondLastName;
+
+    @Size(max = 11)
+    private String dni;
+
     @Email
     @Size(min = 5, max = 100)
     private String email;
@@ -56,14 +62,14 @@ public class UserDTO {
     }
 
     public UserDTO(User user) {
-        this(user.getId(), user.getLogin(), user.getFirstName(), user.getLastName(),
-            user.getEmail(), user.getActivated(), user.getImageUrl(), user.getLangKey(),
+        this(user.getId(), user.getLogin(), user.getFirstName(), user.getLastName(), user.getSecondLastName(),
+            user.getDni(),user.getEmail(), user.getActivated(), user.getImageUrl(), user.getLangKey(),
             user.getCreatedBy(), user.getCreatedDate(), user.getLastModifiedBy(), user.getLastModifiedDate(),
             user.getAuthorities().stream().map(Authority::getName)
                 .collect(Collectors.toSet()));
     }
 
-    public UserDTO(Long id, String login, String firstName, String lastName,
+    public UserDTO(Long id, String login, String firstName, String lastName, String secondLastName, String dni,
         String email, boolean activated, String imageUrl, String langKey,
         String createdBy, ZonedDateTime createdDate, String lastModifiedBy, ZonedDateTime lastModifiedDate,
         Set<String> authorities) {
@@ -72,6 +78,8 @@ public class UserDTO {
         this.login = login;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.secondLastName = secondLastName;
+        this.dni = dni;
         this.email = email;
         this.activated = activated;
         this.imageUrl = imageUrl;
@@ -147,12 +155,22 @@ public class UserDTO {
         return authorities;
     }
 
+    public String getSecondLastName() {
+        return secondLastName;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
     @Override
     public String toString() {
         return "UserDTO{" +
             "login='" + login + '\'' +
             ", firstName='" + firstName + '\'' +
             ", lastName='" + lastName + '\'' +
+            ", secondLastName='" + secondLastName + '\'' +
+            ", dni='" + dni + '\'' +
             ", email='" + email + '\'' +
             ", imageUrl='" + imageUrl + '\'' +
             ", activated=" + activated +
