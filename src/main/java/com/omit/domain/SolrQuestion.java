@@ -1,32 +1,37 @@
 package com.omit.domain;
 
 import org.apache.solr.client.solrj.beans.Field;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.solr.core.mapping.Indexed;
+import org.springframework.data.solr.core.mapping.SolrDocument;
 
 import java.util.Date;
 
 /**
  * Created by Alejandro on 5/5/17.
  */
+@SolrDocument(solrCoreName = "questions")
 public class SolrQuestion {
-    @Field
+    @Id
+    @Indexed(name = "id", type = "string")
     private String id;
 
-    @Field
+    @Indexed(name = "owner", type = "long")
     private Long owner;
 
-    @Field
+    @Indexed(name = "subject", type = "long")
     private Long subject;
 
-    @Field
+    @Indexed(name = "teacher", type = "long")
     private Long teacher;
 
-    @Field
+    @Indexed(name = "text", type = "string")
     private String text;
 
-    @Field
+    @Indexed(name = "score", type = "int")
     private int score;
 
-    @Field
+    @Indexed(name = "date", type = "date")
     private Date date;
 
     public String getId() {

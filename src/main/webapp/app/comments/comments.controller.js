@@ -86,6 +86,7 @@
                 if(subj != undefined){
                     if(teach != undefined){
                         if(comment != undefined && comment != ""){
+                            CommentsService.saveComment(vm.currentAccount.id,subj.id,teach.id,comment,4);
 
                         AlertService.success(vm.MSG_SUCCESS_SENT);
 
