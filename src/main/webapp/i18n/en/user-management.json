@@ -18,6 +18,8 @@
         "login": "Login",
         "firstName": "First name",
         "lastName": "Last name",
+        "secondLastName": "Last name 2",
+        "dni": "Dni",
         "email": "Email",
         "activated": "Activated",
         "deactivated": "Deactivated",

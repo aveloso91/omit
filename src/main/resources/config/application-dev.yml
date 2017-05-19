@@ -54,6 +54,9 @@ spring:
         cache-seconds: 1
     thymeleaf:
         cache: false
+    data:
+      solr:
+        host: http://localhost:8983/solr
 
 liquibase:
     contexts: dev

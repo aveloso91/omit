@@ -31,6 +31,7 @@
                         $translatePartialLoader.addPart('students');
                         $translatePartialLoader.addPart('comments');
                         $translatePartialLoader.addPart('global');
+                        $translatePartialLoader.addPart('user-management');
                         return $translate.refresh();
                     }]
                 }
